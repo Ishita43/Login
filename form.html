@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>USER DATA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="font-family:lato; font-size:30px; background-image:url('1.jpeg');background-size: cover;background-repeat: no-repeat;">
+<div style="margin-left:40px; margin-top:30px">
+                <h2 ><b>USER DETAILS</b><button type="button" class="btn float-right" data-toggle="modal" data-target="#myModal" onclick="editData()"><i class='far fa-edit  mt-2' style='font-size:30px;'></i><br></button>
+                </h2>
+                <hr>
+                        <div class="modal" id="myModal" >
+                        	<div class="modal-dialog modal-dialog-scrollable">
+                          	<div class="modal-content">
+                            <!-- Modal Header -->
+                    	        <div class="modal-header">
+                    	          <h4 class="modal-title"><i class="fa fa-sign-in mr-3" style="font-size:36px"></i>EDIT DETAILS</h4>
+                    	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    	        </div>
+                            <!-- Modal body -->
+                            	<div class="modal-body">
+                              	<form onsubmit="update()">
+                                <div class="form-group">
+                                        <label for="name"><i class="fa fa-user-o mr-3" style="font-size:24px"></i>FirstName:</label>
+                                        <input type="name" class="form-control" id="fname" placeholder="Enter firstname" name="name" >
+                                        </div>
+                                         <hr>
+                                          <div class="form-group">
+                                                <label for="name"><i class="fa fa-user-o mr-3" style="font-size:24px"></i>LastName:</label>
+                                                <input type="name" class="form-control" id="lname" placeholder="Enter lastname" name="name" >
+                                              </div>
+                                              <hr>
+                                              <div class="form-group">
+                                                <label for="date"><i class="fa fa-calendar mr-3" style="font-size:24px"></i> Date Of Birth:</label>
+                                                <input type="date" class="form-control" id="dob" placeholder="Enter date of birth" name="date" max="1999-04-26">
+                                              </div>
+                                              <hr>
+                                              <div class="form-group">
+                                                <label for="number"><i class="fa fa-id-card-o mr-3" style="font-size:24px"></i> Employee Id:</label>
+                                                <input type="number" class="form-control" id="eid" placeholder="Enter employee id" name="number" disabled>
+                                              </div>
+                                              <hr>
+                                              <div class="form-group">
+                                                <label for="email"><i class="fa fa-envelope mr-3" style="font-size:24px"></i> Email:</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" disabled>
+                                              </div>
+                                              <hr>
+                                              <div class="form-group">
+                                                <label for="image"><i class="fa fa-user-circle-o mr-3" style="font-size:24px"></i>Profile Picture:</label>
+                                                <input type="file" class="form-control" id="image" placeholder="your profile pic" name="image">
+                                              </div>
+                                              <hr>
+                                              <div class="form-group">
+                                                <label for="pwd"><i class="fa fa-lock mr-3" style="font-size:24px"></i>Password:</label>
+                                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" disabled>
+                                              </div>
+                                              <hr>
+                                              <div class="form-group form-check">
+                                                  <input class="form-check-input" type="checkbox"> Remember me
+                                                </label>
+                                              </div>
+                                              <hr>
+                    							<input type="submit" class="btn btn-primary">Submit</input>
+                    						</form>
+                            	</div>
+                    					<!-- Modal footer -->
+                    					<div class="modal-footer">
+                    						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    					</div>
+                        		</div>
+                      		</div>
+                        </div>
+
+                  </div>
+
+  		  <div>
+          <p id="7" style="margin-left:30px">  </p>
+        </div>
+<hr>
+  		  <div >
+  		     <button class="btn btn-primary" onclick="myFunction()" style="margin-left:30px">DONE</button>
+  		  </div>
+		  </div>
+
+    <script >
+      function myFunction()
+      {
+        location.replace("assignment1b.html");
+      }
+
+      document.addEventListener("DOMContentLoaded",showList());
+                  function showList(){
+                  var details = localStorage.getItem("added-items");
+                  details = JSON.parse(details);
+                      console.log(details);
+                      var data = "";
+                  for( let key of Object.keys(details))
+                      {
+                          if(key != "pwd")
+                              {
+                                  data = data + "<br>" + key + " = " + details[key];
+                              }
+                      }
+                  var p = document.getElementById("7").innerHTML = data;
+                      console.log(p);
+                  }
+                  function editData()
+                     {
+                       console.log("aaaa");
+                         var details = localStorage.getItem("added-items");
+                         details = JSON.parse(details);
+                         document.getElementById("eid").value = details["eid"];
+                         document.getElementById("eid").disabled = true;
+                         document.getElementById("fname").value = details["fname"];
+                         document.getElementById("lname").value = details["lname"];
+                         document.getElementById("email").value = details["email"];
+                         document.getElementById("email").disabled = true;
+                         document.getElementById("pwd").value = details["pwd"];
+                         document.getElementById("dob").value = details["dob"];
+
+                     }
+                     function update()
+                 {
+                         var eid = document.getElementById("eid").value;
+                         var fname = document.getElementById("fname").value;
+                         var lname = document.getElementById("lname").value;
+                         var email = document.getElementById("email").value;
+                         var pwd = document.getElementById("pwd").value;
+                         var dob = document.getElementById("dob").value;
+                         var validated = false;
+                         var item = {
+                           fname: fname,
+                                 lname: lname,
+                                 dob : dob,
+                                 eid : eid,
+                                 email: email,
+                                 pwd: pwd
+
+                             };
+                         item = JSON.stringify(item);
+                             localStorage.setItem("added-items",item);
+                         showList();
+                 }
+      
+    </script>
+</body>
+</html>

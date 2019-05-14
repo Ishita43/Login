@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>LOGIN PAGE</title>
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-------------------------------------------STYLE------------------------------------------------------------------------------------------------------------------->
+
+  <style>
+
+    html,body{
+    height: 100%;
+    Font-family:"Lato";
+    }
+
+    .card{
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color:rgba(0,0,0,0.5) !important;
+    box-shadow: 10px 10px;
+    }
+
+    .social_icon span:hover{
+    color: white;
+    cursor: pointer;
+    }
+
+    .input-group-prepend span{
+    width: 50px;
+    background-color: rgb(6, 100, 138);
+    color: black;
+    border:0 !important;
+    }
+
+    .remember{
+    color: white;
+    }
+
+    .remember input
+    {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+    }
+
+    .login_btn{
+    color: black;
+    background-color: rgb(6, 100, 138);
+    width: 100px;
+    }
+
+    .login_btn:hover{
+    background-color: white;
+    }
+    div.transbox{
+        background-color:#ffffff;
+        margin:30px;
+        border: 1px solid black;
+        opacity:0.6;
+        filter:alpha(opacity=60);
+    }
+
+  </style>
+</head>
+
+
+
+<!--------------------------BODY------------------------------------------------------------------------------------------------------------------------------------>
+
+<body style="background-image:url('1.jpeg');background-size: cover;background-repeat: no-repeat;">
+
+        <div class="d-flex justify-content-center h-100  align-items-center">
+                <div class="row bg-secondary">
+                    
+         <div class="col-sm-6" style=""><div class="card-header">
+                        <h3 style="text-align:center">LOGIN</h3>
+                    </div><div class="card-body">
+                        <form>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="username" id="fname">
+        
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="password" id="pwd">
+                            </div>
+                            <div class="row align-items-center remember">
+                                <input type="checkbox">Remember Me
+                            </div><br>
+                            <div class="form-group">
+                                <input type="button" value="Login" class="btn btn-sm float-center login_btn" onclick="myFunction()">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center">
+                            <a href="#">Forgot your password?</a>
+                        </div>
+                    </div></div>
+                        <div class="col-sm-6" style="background-image:url('2.jpg');background-repeat:no repeat;background-size:cover; border:1px solid black">
+            <div class="h3 transbox"><p style="margin:5%;text-align:center">WELCOME TO THE WORLD</p></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+<!--------------------------MODAL NUMBER 1------------------------------------------------------------------------------------------------------------------------------------>
+
+
+            <div class="modal" id="myModal1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title"><i class="fa fa-file mr-3" style="font-size:36px" ></i>USER DATA</h4>
+                      <button type="button" class="close" onclick="redirect1()">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body"><p id="data"></p>
+                    <ul></ul>
+                    <button type="button" class="btn btn-danger" onclick="nextPage()">edit</button>
+
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" onclick="redirect1()">Close</button>
+                    </div>
+                </div>
+              </div>
+                </div>
+        
+
+
+<!--------------------------MODAL NUMBER 2------------------------------------------------------------------------------------------------------------------------------------>
+
+                <div class="modal" id="myModal2">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                      
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title"><i class="fa fa-sign-in mr-3" style="font-size:36px"></i>Sign Up User</h4>
+                          <button type="button" class="close" onclick="hide_modal()">&times;</button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          <form action="#">
+                            <div class="form-group">
+                                <label for="name"><i class="fa fa-user-o mr-3" style="font-size:24px"></i>FirstName:</label>
+                                <input type="name" class="form-control" id="fname" placeholder="Enter firstname" name="name" required>
+                              </div>
+                              <hr>
+                              <div class="form-group">
+                                <label for="name"><i class="fa fa-user-o mr-3" style="font-size:24px"></i>LastName:</label>
+                                <input type="name" class="form-control" id="lname" placeholder="Enter lastname" name="name" required>
+                              </div>
+                              <hr>
+                              <div class="form-group">
+                                <label for="date"><i class="fa fa-calendar mr-3" style="font-size:24px"></i> Date Of Birth:</label>
+                                <input type="date" class="form-control" id="dob" placeholder="Enter date of birth" name="date" max="1999-04-26">
+                              </div>
+                              <hr>
+                              <div class="form-group">
+                                <label for="number"><i class="fa fa-id-card-o mr-3" style="font-size:24px"></i> Employee Id:</label>
+                                <input type="number" class="form-control" id="eid" placeholder="Enter employee id" name="number" required>
+                              </div>
+                              <hr>
+                              <div class="form-group">
+                                <label for="email"><i class="fa fa-envelope mr-3" style="font-size:24px"></i> Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                              </div>
+                              <hr>
+                              <div class="form-group">
+                                <label for="image"><i class="fa fa-user-circle-o mr-3" style="font-size:24px"></i>Profile Picture:</label>
+                                <input type="file" class="form-control" id="image" placeholder="your profile pic" name="image">
+                              </div>
+                              <hr>
+                              <div class="form-group">
+                                <label for="pwd"><i class="fa fa-lock mr-3" style="font-size:24px"></i>Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                              </div>
+                              <hr>
+                              <div class="form-group form-check">
+                                  <input class="form-check-input" type="checkbox"> Remember me
+                                </label>
+                              </div>
+                              <hr>
+                              <button type="submit" class="btn btn-primary" onclick="myId()">Signup</button>
+                              <button type="reset" value="Reset" class="btn btn-primary">Reset</button>
+
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                    <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" onclick="hide_modal()" style="float:right">Close</button>
+                    </div>
+                    </div>
+                  </div>
+                    </div> 
+        
+ <!--------------------------SCRIPT------------------------------------------------------------------------------------------------------------------------------------>
+
+
+
+                    <script>
+                      var text1 = {list: [{"fname":"ishita", "pwd":"ishita","lname":"chhabra","dob":"04/03/1998","eid":"001","email":"ishita@gmail.com"},{"fname":"admin",
+                        "pawd":"admin","lname":"admin","dob":"04/03/1998","eid":"002","email":"admin@gmail.com"},{"fname":"ish", "pwd":"ish","lname":"kataria","dob":"04/03/1998","eid":"003","email":"ish@gmail.com"}]};
+
+                        var text = [{"fname":"ishita", "pwd":"ishita","lname":"chhabra","dob":"04/03/1998","eid":"001","email":"ishita@gmail.com"},{"fname":"admin",
+                        "pawd":"admin","lname":"admin","dob":"04/03/1998","eid":"002","email":"admin@gmail.com"},{"fname":"ish", "pwd":"ish","lname":"kataria","dob":"04/03/1998","eid":"003","email":"ish@gmail.com"}];
+                        function myFunction() {
+                        
+                          var fname,pwd;
+                          fname =document.getElementById("fname").value;
+                          pwd =document.getElementById("pwd").value;
+                          var logged = false;
+		                      var i;
+		                      for(i = 0; i < text.length; i++){
+			                    logged = false;
+			                    if(fname == text[i].fname && pwd == text[i].pwd){
+				                  logged= true;
+				                  break;
+                          }
+                      }
+                            if(logged)
+                            {  document.getElementById("myModal1").style.display='block';
+                              document.getElementById("data").innerHTML  = "<li> First Name: " + text[i].fname + "</li> <li> Last Name: "  + text[i].lname +"</li> <li> Date of Birth: " + text[i].dob +"</li> <li> Email: " + text[i].email +  "</li> <li> Employee ID: " + text[i].eid +"</li><li> Password: " + text[i].pwd +"</li>";
+                              let string = text[i];
+			                        localStorage.setItem('added-items', JSON.stringify(string));
+                              
+                            }
+                            else{
+
+                            document.getElementById("myModal2").style.display='block';
+                            document.getElementById("email").value = fname+"@gmail.com";
+                            document.getElementById("email").disabled = true;
+
+                              
+                            }
+     
+                        }
+                        function hide_modal()
+                        {
+                         document.getElementById("myModal1").style.display = 'none';
+                         document.getElementById("myModal2").style.display = 'none';
+
+                     }
+                     function redirect1(){
+                        location.replace("assignment1b.html");
+
+                     }
+                     function redirect2(){
+                        location.replace("temp.html");
+
+                     }
+                     function myId()
+                    {
+	                  var id = document.getElementById("eid").value;
+	                  for (let x of Object.keys(text))
+                        {
+                             if(text[x].eid == id)
+                             {
+                               alert("Employee Id should be unique");
+                             }
+                            else
+                            {
+                            validated = true;
+                            }
+                        }
+                    }
+                    function nextPage(){
+                        location.replace("form.html");
+
+                     }
+                        </script>
+                        
+        </body>
+</html>
+
+

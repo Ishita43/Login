@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WEBSITE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body{
+        background-color:lightgray;
+        Font-family:"Lato";
+        margin: 5px 10px 80px 200px;
+    }
+    pre{
+        border-style:hidden;
+        background-color:white;
+    }
+    .vl {
+  border-left: 6px solid green;
+  height: 60px;
+}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <ul class="navbar-nav">
+    <li class="nav-item ">
+      <a class="nav-link" href="#">Website Name</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Page 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Page 2</a>
+    </li>
+  </ul>
+  <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
+    <ul class="navbar-nav">
+    <li class="nav-item">
+    <a class="nav-link" href="#"><i style='font-size:24px' class='fas'>&#xf406;</i>  SignUp</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#"><i style="font-size:24px" class="fa">&#xf090;</i> LogIn</a>
+    </li>
+    </ul>
+</nav>
+
+
+<div class="container" style="margin:70px 10px 2px 10px;">
+    <div class="row"style="margin-right: -185px;margin-left: -210px;">
+
+
+      <div class="col-sm-4"style="height:200px;height: 555px;background-color: white">
+            <button type="button" class="btn" data-toggle="modal" data-target="#myModal" style="float:right;"> <i class="fa fa-edit" style="font-size:24px"></i>
+            </button><br>
+            <div class="text-center"> <img src="user.png" alt="user" style="border-radius:50% ;width:148px"> </div>
+            <br>
+            <h2 align="center">Ishita Chhabra</h2>
+            <h5 align="center">Programmer</h5>
+            <hr>
+            
+            
+              <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                  
+             
+                    <div class="modal-header">
+                      <h4 class="modal-title"><i class="fa fa-edit mr-3" style="font-size:24px"></i>EDIT PROFILE</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <div class="modal-body">
+                       <form action="/action_page.php">
+                <div class="form-group">
+                  <label for="name"><i class="fa fa-user-o mr-3" style="font-size:24px"></i>Name</label>
+                  <input type="name" class="form-control" id="name" placeholder="Enter your name" name="name">
+                </div>
+                
+                
+                <div class="form-group">
+                  <label for="address"><i class="material-icons mr-3">&#xe55f;  </i>Address</label>
+                  <input type="address" class="form-control" id="add" placeholder="Enter address" name="add">
+                </div>
+                
+                <div class="form-group">
+                  <label for="phone"><i class="material-icons mr-3">&#xe551;  </i>Phone</label>
+                  <input type="phone" class="form-control" id="phone" placeholder="Enter phoneno." name="phone">
+                </div>
+                
+                <div class="form-group">
+                  <label for="email"><i class="material-icons mr-3">&#xe554;</i> Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                
+                <div class="form-group">
+                  <label for="skypeid"><i class="material-icons mr-3">&#xe55f;  </i>Skype Id</label>
+                  <input type="id" class="form-control" id="id" placeholder="Enter skype id" name="id">
+                </div>
+                
+                
+                <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                  </label>
+                </div>
+                
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            
+                    </div>
+            
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              
+    
+            
+    
+            <br>
+            <pre><i class="material-icons">&#xe55f;  </i>  Majid Band,Hyderabad
+<i class="material-icons">&#xe551;  </i>  8684084451
+<i class="material-icons">&#xe554;</i>  ishita.b@beehyv.com
+<i style="font-size:24px" class="fa">&#xf0c1;</i><a href="#">  https://beehyv.in </a>
+<i style="font-size:24px" class="fa">&#xf1ab;</i>  English</pre><hr>
+     <p style="text-align:center;"> <img src="twitter.jpg" alt="twitter" style="width:30px">
+      <img src="images.png" alt="cloud" style="width:30px">    </p>
+      </div>
+
+
+      <div class="col-sm-8">
+            <div class="media border p-3"style="background-color: white;">
+                    <div class="media-body">
+                      <h4> BACKGROUND</h4><hr>
+                      <div class="media p-3">
+                        <i style="font-size:24px"class='far mr-3'>&#xf2bb;</i>
+                        <div class="media-body">
+                          <h4>ABOUT</h4><hr>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                      </div>
+                      
+                      <div class="media p-3">
+                        <i style='font-size:24px' class='fas mr-3'>&#xf1ad;</i>
+                        <div class="media-body">
+                          <h4>WORK EXPERIENCE</h4><hr>
+                          <p><b>Project 1.</b> <a href="#">Java.Angular</a> <br><small>Dec 2013-Dec 2014  <i class='far fa-clock'></i> 1 year</small></p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod    tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                <ul style="list-style-type:circle;">
+                                                <li>Random point 1</li>
+                                                <li>Random point 2</li>
+                                                <li>Random point 3</li>
+                                                </ul>
+                        </div>
+                      </div>
+                      
+                      <div class="media p-3">
+                        <i style='font-size:24px' class='fas mr-3'>&#xf7d9;</i>
+                        <div class="media-body">
+                          <h4>SKILLS</h4>
+                          <hr>
+                          <div class="vl">
+                            <div style="margin-left:10px;">Web Development
+                            <br>
+                            <button type="button" class="btn btn-primary btn-sm">HTML</button>
+                            <button type="button" class="btn btn-primary btn-sm">CSS</button>
+                            <button type="button" class="btn btn-primary btn-sm">Javascript</button>
+                        </div></div><hr>
+                        <div class="vl">
+                            <div style="margin-left:10px;">Compression
+                            <br>
+                            <button type="button" class="btn btn-primary btn-sm">Mpeg</button>
+                            <button type="button" class="btn btn-primary btn-sm">MP4</button>
+                            <button type="button" class="btn btn-primary btn-sm">GIF</button>
+                        </div></div>
+                        </div>
+                      </div>
+                      
+                      <div class="media p-3">
+                        <i style='font-size:24px' class='fas mr-3'>&#xf501;</i>
+                        <div class="media-body">
+                          <h4>EDUCATION</h4>
+                          <hr><p><b>Bachelor of technology , </b> IIT Kanpur<br><small>Dec 2013-Dec 2014 <small><br><b><i>CGPA:Random</i></b></p>
+                            <div class="container">
+                    <button type="button" class="btn btn-primary btn-sm">DB1101-BasicSQL</button>
+                    <button type="button" class="btn btn-primary btn-sm">CS2011-Java Introduction</button>    
+                  </div>
+                        </div>
+                      </div>
+                      
+                      <div class="media p-3">
+                        <i style='font-size:24px' class='fas mr-3'>&#xf004;</i>
+                        <div class="media-body">
+                          <h4>INTRESTS</h4>
+                          <hr><p><b>Wildlife</b></p>
+                          <div class="container">
+                  <button type="button" class="btn btn-primary btn-sm">Forests</button>
+                  <button type="button" class="btn btn-primary btn-sm">Unicorn</button>  
+                  <i style="font-size:24px;float: right;" class="fa">&#xf0c9;</i>  
+                </div>
+                        </div>
+                      </div>
+                     
+                    </div>
+                  </div>
+                
+                
+  </div>
+  
+                  
+</body>
+</html>
